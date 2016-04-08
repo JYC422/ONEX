@@ -63,7 +63,7 @@ function create() {
   enemies = game.add.group();
   enemies.enableBody = true;
   enemies.physicsBodyType = Phaser.Physics.ARCADE;
-  game.add.tween(enemies).to({ x: -(game.width + game.height) }, 6000, Phaser.Easing.Linear.Out, true);
+  game.add.tween(enemies).to({ x: -(game.width + game.height) }, 8000, Phaser.Easing.Linear.Out, true);
   for (var i = 0; i < 10; i++) {
       var x = game.width + Math.random() * game.height;
       var y = Math.random() * game.height;
