@@ -3,13 +3,12 @@
 ![img](https://i.imgur.com/cyajMQR.png)
 
 ## Intro 
-A Marvel comic centric app that allows users to make custom comic book lists for themselves, and browse the vast Marvel comic library. This would provide all Marvel comic enthusiasts around the universe a resource to organize their comic lists and collections!
+A side-scrolling shooter game that takes place in a foreign land.
 
 ## Planning
 ![img](https://i.imgur.com/N75FpYl.jpg)  
-After reviewing the vast choices of API options to base our app upon, we came across the Marvel Comics API, and it looked to be a natural fit for all the team members.  We registered for the API key, and had each team member play with it and confirm that belief.  One thing all members agreed upon was that the API had an abundance of great information. However, the difficulty of accessing that information, even on Marvel's own website, proved to be difficult and limited.
-
-We felt this was the opportunity and challenge we were looking for.  We knew we could create a much easier way to use their website, as well as provide an aesthetic fitting to the Marvel Comics brand (by using Marvel's rich character and cover art).
+I wanted to create a side-scrolling shooter game and incorporate new features in addition to popular core features. In addition to the action aspect of the genre, I planned to add more rpg elements to give the game more longetivity and depth. Before even trying to tackle the creation of a game, I looked into gaming frameworks and ended up working with Phaser.
+![img](https://i.imgur.com/sOAHUOG.png)  
 
 ##Technologies  
 
@@ -17,13 +16,16 @@ We felt this was the opportunity and challenge we were looking for.  We knew we 
 - Javascript  
 - CSS  
 - HTML  
+- Trello
+- Piskel
 
 ##Completed  
-- Successful connection to Marvel's API**    
-- A clean, modern, and intuitive user interface**   
-- Ability to add any comic to a custom list**    
-- An organized** **structure to make browsing thousands of comics easy (browse by a character's name)**  
-- Character search function**  
+- Game Environment  
+- Player and Enemies generated  
+- Collision detection  
+- Sprite Animations  
+- Player movement and fire
+- Enemy movement Control
 
 ##Installation  
 ###Step 1:  
@@ -47,4 +49,9 @@ Get SSH
 [Onex](http://jyc422.github.io/ONEX/)
 
 ##Next Steps:
-
+- Weapon Variation
+- Bosses
+- Multiple Levels
+- Leveling and Abilities
+- Currency and Upgrades
+- Save and Load Game

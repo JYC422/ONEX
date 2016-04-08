@@ -2,6 +2,8 @@ var game = new Phaser.Game(1000, 600, Phaser.AUTO, 'game',
   { preload: preload, create: create, update: update }
 );
 
+var start = false;
+var mainmenu;
 var background;
 var foretop1;
 var foretop2;
@@ -18,6 +20,7 @@ var bullet;
 function preload() {
 
   game.load.crossOrigin = true;
+  game.load.image('mainmenu', 'assets/mainmenu.png');
   game.load.image('background', 'assets/back.png');
   game.load.image('foretop', 'assets/foretop2.png');
   game.load.image('forebot1', 'assets/forebot1.png');
@@ -25,6 +28,7 @@ function preload() {
   game.load.spritesheet('player', 'assets/ship2.png', 69, 36, 2);
   game.load.image('bullet', 'assets/bullet.png');
   game.load.spritesheet('enemies', 'assets/enemy1.png', 37, 36, 2);
+
 }
 
 function create() {
@@ -63,16 +67,24 @@ function create() {
   enemies = game.add.group();
   enemies.enableBody = true;
   enemies.physicsBodyType = Phaser.Physics.ARCADE;
-  game.add.tween(enemies).to({ x: -(game.width + game.height) }, 8000, Phaser.Easing.Linear.Out, true);
+  game.add.tween(enemies).to({ x: -(game.width + game.height + 100) }, 8000, Phaser.Easing.Linear.Out, true);
   for (var i = 0; i < 10; i++) {
       var x = game.width + Math.random() * game.height;
       var y = Math.random() * game.height;
-      var enemy = enemies.create(x, y > 300 ? y - 20 : y + 20, 'enemies', game.rnd.integerInRange(0, 10));
+      var enemy = enemies.create(x, y > 300 ? y - 50 : y + 50, 'enemies', game.rnd.integerInRange(0, 10));
       enemy.name = 'enemy' + i;
       enemy.animations.add('animate', [0, 1]);
       enemy.animations.play('animate', 10, true);
   }
 
+  mainmenu = game.add.tileSprite(0, 0, game.width, game.height, 'mainmenu');
+
+  startgame = game.add.text(game.world.centerX + 130, game.world.centerY, "S T A R T", { font: '50px Helvetica', fill: '#fff' })
+  startgame.inputEnabled = true;
+  startgame.events.onInputUp.add(function(){
+    mainmenu.destroy();
+    startgame.destroy();
+  });
 
   cursors = game.input.keyboard.createCursorKeys();
 
