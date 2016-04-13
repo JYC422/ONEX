@@ -1,6 +1,6 @@
 # O N E X
 
-![img](https://i.imgur.com/cyajMQR.png)
+![img](https://i.imgur.com/GMECrY3.png)
 
 ## Intro 
 A side-scrolling shooter game that takes place in a foreign land.
