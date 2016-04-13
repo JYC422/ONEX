@@ -46,7 +46,7 @@ Get SSH
 ##Links
 [Trello](https://trello.com/b/DpyUZJnp/o-n-e-x)  
 [GitHub](https://github.com/JYC422/ONEX)    
-[Onex](http://jyc422.github.io/ONEX/)
+[ONEX](http://jyc422.github.io/ONEX/)
 
 ##Next Steps:
 - Weapon Variation
